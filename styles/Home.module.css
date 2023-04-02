@@ -18,6 +18,17 @@
   font-family: var(--font-mono);
 }
 
+
+.header{
+  text-align: center;
+  font-size: 25px;
+}
+
+.footer{
+  text-align: center;
+  font-size: 30px;
+}
+
 .description a {
   display: flex;
   justify-content: center;
