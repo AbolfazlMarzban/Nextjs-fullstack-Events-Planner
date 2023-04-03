@@ -3,7 +3,7 @@ import React from 'react';
 function index(props) {
     return (
         <div>
-                   <h1>Events Page</h1>
+                   <h1>Events</h1>
                    <a href=''>
           <img />
           <h2>Events in London</h2>
@@ -21,3 +21,4 @@ function index(props) {
 }
 
 export default index;
+
