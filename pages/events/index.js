@@ -1,6 +1,6 @@
 import React from 'react';
 
-function index(props) {
+function index({data}) {
     return (
         <div>
                    <h1>Events</h1>
@@ -21,4 +21,14 @@ function index(props) {
 }
 
 export default index;
+
+export async function getStaticProps(){
+    const { events_categories } = await import('/data/data.json')
+    console.log(events_categories)
+    return{
+        props:{
+            data: events_categories,
+        }
+    }
+}
 
