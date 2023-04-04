@@ -5,7 +5,7 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({title}) {
+export default function Home({data}) {
   return (
     <>
       <Head>
@@ -21,14 +21,21 @@ export default function Home({title}) {
           <a href='/'>Home</a>
           <a href='/events'>Events</a>
           <a href='/about-us'>About us</a>
-
         </nav>
 
       </header>
 
 
       <main className={styles.main}>
-        <a href='/events/london'>
+      {data.map(ev => 
+      <a href={`/events/${ev.id}`} key={ev.id}>
+        {/* <Image src={ev.image} alt={ev.title} width={200} height={200}/> */}
+        <img src={ev.image} alt={ev.title} ></img>
+        <h2>{ev.title}</h2>
+        <p>{ev.description}</p>
+      </a>)}
+
+        {/* <a href='/events/london'>
           <img />
           <h2>Events in London</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque lobortis leo, in faucibus lectus congue eu. Donec ac dui fringilla, volutpat orci bibendum, tincidunt ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean augue leo, posuere vitae consequat condimentum, convallis ornare turpis. Pellentesque vel sem turpis. Cras congue, arcu a rutrum mollis, massa sapien aliquet augue, sit amet mattis dui quam sed purus. Maecenas tincidunt vitae massa vel congue. Vivamus et libero ut velit ultricies scelerisque et in purus. Phasellus in faucibus mi, at rutrum libero. Maecenas nisi libero, ornare vel tincidunt at, tristique tempor ante. Aenean convallis maximus nunc ac pretium. Ut dolor lorem, pretium et elit et, sodales posuere enim.</p>  
@@ -42,7 +49,7 @@ export default function Home({title}) {
           <img />
           <h2>Events in Toronto</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque lobortis leo, in faucibus lectus congue eu. Donec ac dui fringilla, volutpat orci bibendum, tincidunt ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean augue leo, posuere vitae consequat condimentum, convallis ornare turpis. Pellentesque vel sem turpis. Cras congue, arcu a rutrum mollis, massa sapien aliquet augue, sit amet mattis dui quam sed purus. Maecenas tincidunt vitae massa vel congue. Vivamus et libero ut velit ultricies scelerisque et in purus. Phasellus in faucibus mi, at rutrum libero. Maecenas nisi libero, ornare vel tincidunt at, tristique tempor ante. Aenean convallis maximus nunc ac pretium. Ut dolor lorem, pretium et elit et, sodales posuere enim.</p>  
-          </a>
+          </a> */}
       </main>
       <footer className={styles.footer}>
         <p>lorem ipsom</p>
@@ -56,7 +63,7 @@ export async function getServerSideProps(){
   console.log('events_categories', events_categories)
   return{
       props:{
-          title: 'hello'
+          data: events_categories
       }
   }
 }
