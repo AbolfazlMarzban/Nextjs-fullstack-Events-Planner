@@ -3,19 +3,12 @@ import React from 'react';
 function index({data}) {
     return (
         <div>
-                   <h1>Events</h1>
-                   <a href=''>
-          <img />
-          <h2>Events in London</h2>
-          </a>
-          <a href=''>
-          <img />
-          <h2>Events in Vancouver</h2>
-          </a>
-          <a href=''>
-          <img />
-          <h2>Events in Toronto</h2>
-          </a>
+            {data.map(ev =>(
+                <a href={`/events/${ev.id}`} key={ev.id}>
+                    <img src={ev.image} alt={ev.title}></img>
+                    <h2>{ev.title}</h2>
+                </a>
+            ))}
         </div>
     );
 }
