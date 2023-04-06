@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 function index({data, pageName}) {
     return (
         <div>
@@ -7,12 +7,12 @@ function index({data, pageName}) {
             <h1>Events in {pageName}</h1>
 
             <div>
-                {data.map(ev =>(
-                    <a href={`/events/${ev.city}/${ev.id}`} key={ev.id}>
+                {data.map (ev =>(
+                    <Link key={ev.id} href={`/events/${ev.city}/${ev.id}`} passHref={ true }>
                         <img src={ev.image} alt={ev.title}></img>
                         <h2>{ev.title}</h2>
                         <p>{ev.description}</p>
-                    </a>
+                    </Link>
                 ))}
             </div>
         </div>
