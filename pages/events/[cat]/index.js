@@ -1,9 +1,11 @@
 import React from 'react';
 
-function index({data}) {
+function index({data, pageName}) {
     return (
         <div>
-            <h1>Events in {data[0].city}</h1>
+            {/* <h1>Events in {data[0].city}</h1> */}
+            <h1>Events in {pageName}</h1>
+
             <div>
                 {data.map(ev =>(
                     <a href={`/events/${ev.city}/${ev.id}`} key={ev.id}>
@@ -45,7 +47,8 @@ export async function getStaticProps(context){
     
     return{
         props: {
-            data
+            data, 
+            pageName: id
         }
     }
 }
