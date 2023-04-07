@@ -1,9 +1,12 @@
 import React from 'react';
 
-function page(props) {
+function page({data}) {
+    console.log('data', data)
     return (
         <div>
-            <h1>Our Single Event</h1>
+            <img src={data.image} alt={data.title}></img>
+            <h1>{data.title}</h1>
+            <p>{data.description }</p>
         </div>
     );
 }
@@ -28,5 +31,13 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps(context){
-
+console.log(context)
+const id = context.params.id
+const { allEvents } = await import('/data/data.json')
+const eventData = allEvents.find(ev => ev.id === id)
+return{
+    props:{
+        data: eventData
+    }
+}
 }
