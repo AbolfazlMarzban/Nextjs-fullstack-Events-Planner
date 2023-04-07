@@ -1,13 +1,16 @@
 import React from 'react';
+import Link from 'next/link';
 
 function index({data}) {
     return (
         <div>
             {data.map(ev =>(
-                <a href={`/events/${ev.id}`} key={ev.id}>
+                <Link href={`/events/${ev.id}`} key={ev.id} passHref={true}>
+             
                     <img src={ev.image} alt={ev.title}></img>
                     <h2>{ev.title}</h2>
-                </a>
+                
+                </Link>
             ))}
         </div>
     );
