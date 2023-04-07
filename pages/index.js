@@ -4,7 +4,8 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import { HomePage } from '@/src/components/home/home-page'
-
+import { Footer } from '@/src/components/footer/footer'
+import { Header } from '@/src/components/header/header'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({data}) {
@@ -17,20 +18,11 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <nav>
-          <img />
-          <Link href='/' passHref={ true }>Home</Link>
-          <Link href='/events' passHref={ true }>events</Link>
-          <Link href='/about-us' passHref={ true }>About us</Link>
-        </nav>
-      </header>
-
+      
+    <Header/>
     <HomePage data={data}/>
-    
-      <footer className={styles.footer}>
-        <p>lorem ipsom</p>
-      </footer>
+    <Footer />
+
     </>
   )
 }
