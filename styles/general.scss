@@ -1,0 +1,63 @@
+
+header {
+   height: 300px;
+   padding: 20px;
+   background: linear-gradient(305deg, #dbfff3, transparent);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   h1{
+    width: 60%;
+    font-size: 40px;
+    text-transform: uppercase;
+   }
+ .topNav{
+   display: flex;
+   justify-content: space-between;
+   align-content: center;
+   ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    li{
+      font-weight: 600;
+      font-size: 16px;
+    }
+   }
+ }
+}
+ 
+footer{
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+main{
+  width: 100%;
+  max-width: 1450px;
+  margin: auto;
+  padding: 30px;
+}
+
+.home-body{
+  display: flex;
+  flex-direction: column;
+  .card{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+    .content{
+      width: 50%;
+    }
+    img{
+      width: 200px;
+      height: auto;
+    }
+  }
+}
