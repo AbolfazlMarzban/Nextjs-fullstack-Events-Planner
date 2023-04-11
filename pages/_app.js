@@ -1,16 +1,15 @@
-import '@/styles/globals.css'
-import '@/styles/general.scss'
-import MainLayout from '@/src/components/layout/mainLayout'
+import MainLayout from '../src/components/layout/main-layout';
+import '../styles/globals.css';
+import '../styles/general.sass';
 
-export default function App({ Component, pageProps }) {
-  return(
+function MyApp({ Component, pageProps }) {
+  return (
     <>
-     <MainLayout>
-        <main>
+      <MainLayout>
         <Component {...pageProps} />
-        </main>
-     </MainLayout>
+      </MainLayout>
     </>
-   
-  ) 
+  );
 }
+
+export default MyApp;

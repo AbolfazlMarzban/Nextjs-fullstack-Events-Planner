@@ -1,15 +1,44 @@
+const AboutUsPage = () => {
+  return (
+    <div>
+      <h1> About us Page</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <h2>Dlor in reprehenderit </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <ul className="about_us_list">
+        <li>
+          <h3>Dlor in reprehenderit </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in
+          </p>
+        </li>
+        <li>
+          <h3>Sed do eiusmod tempor </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in
+          </p>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
-const Page = () => {
-    return (
-        <div>   
-         <h1>About Us</h1>
-         <p>
-         Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi quis euismod odio. Morbi ut vehicula ex. Sed sed pretium ipsum. Quisque elit nisi, consectetur ac elementum vestibulum, vulputate sed neque. Ut iaculis bibendum scelerisque. Duis sollicitudin iaculis dui a maximus. Sed fringilla tortor sed enim commodo commodo. Nam placerat diam a enim porta volutpat.
-
-Nam non erat eu nisl varius molestie. Vivamus accumsan nulla scelerisque mollis pellentesque. Maecenas molestie, enim id vestibulum pellentesque, nulla velit posuere magna, vel dapibus arcu urna vel sapien. Aenean sit amet sem tortor. Praesent mi risus, blandit in turpis ac, cursus rhoncus enim. Morbi vel arcu sit amet orci cursus bibendum sit amet in urna. Nullam fermentum a lectus eget posuere. Nunc urna purus, rhoncus ac fringilla sit amet, laoreet id turpis.
-         </p>
-        </div>
-    );
-}
-
-export default Page;
+export default AboutUsPage;

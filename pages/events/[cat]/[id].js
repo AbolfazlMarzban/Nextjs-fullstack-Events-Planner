@@ -1,43 +1,35 @@
-import React from 'react';
+import SingleEvent from '../../../src/components/events/single-event';
 
-function page({data}) {
-    console.log('data', data)
-    return (
-        <div>
-            <img src={data.image} alt={data.title}></img>
-            <h1>{data.title}</h1>
-            <p>{data.description }</p>
-        </div>
-    );
-}
+const EventPage = ({ data }) => <SingleEvent data={data} />;
 
-export default page;
+export default EventPage;
 
-export async function getStaticPaths(){
+export async function getStaticPaths() {
+  const data = await import('/data/data.json');
+  const allEvents = data.allEvents;
 
-    const { allEvents } = await import('/data/data.json')
-    const allPaths = allEvents.map(path =>{
-        return{
-            params:{
-                cat: path.city,
-                id: path.id
-            }
-        }
-    })
+  const allPaths = allEvents.map((path) => {
     return {
-        paths: allPaths,
-        fallback: false
-    }
+      params: {
+        cat: path.city,
+        id: path.id,
+      },
+    };
+  });
+
+  return {
+    paths: allPaths,
+    fallback: false,
+  };
 }
 
-export async function getStaticProps(context){
-console.log(context)
-const id = context.params.id
-const { allEvents } = await import('/data/data.json')
-const eventData = allEvents.find(ev => ev.id === id)
-return{
-    props:{
-        data: eventData
-    }
-}
+export async function getStaticProps(context) {
+  console.log(context);
+  const id = context.params.id;
+  const { allEvents } = await import('/data/data.json');
+  const eventData = allEvents.find((ev) => id === ev.id);
+
+  return {
+    props: { data: eventData },
+  };
 }
