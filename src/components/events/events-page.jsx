@@ -5,10 +5,10 @@ import Link from 'next/link';
 const AllEvents = ({ data }) => {
   return (
     <div className="events_page">
-      {data?.map((ev) => (
+      {data?.map((ev) => ( 
         <Link key={ev.id} href={`/events/${ev.id}`} passHref className="card">
             {/* <Image src={ev.image} alt={ev.title} width={500} height={500} /> */}
-            <img src={ev.image} alt={ev.title} />
+            <img src={ev.image} alt={ev.title} style={{width: '100%'}} />
              <h2>{ev.title} </h2>
         </Link>
       ))}

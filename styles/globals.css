@@ -106,3 +106,21 @@ a {
     color-scheme: dark;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .title{
+    font-size: 30px !important;
+  }
+  header{
+    height: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .content a {
+    width: 100% !important;
+  }
+  .events_page{
+    flex-direction: column !important;
+  }
+}

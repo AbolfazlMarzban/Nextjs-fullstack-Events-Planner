@@ -10,8 +10,8 @@ export const HomePage = ({ data }) => (
             <img src={ev.image} alt={ev.title} style={{width: '100%'}} />
           </div>
           <div className="content">
-            <h2> {ev.title} </h2>
-            <p> {ev.description} </p>
+            <h2 style={{'textAlign': 'left'}}> {ev.title} </h2>
+            <p style={{'textAlign': 'left'}}> {ev.description} </p>
           </div>   
       </Link>
     ))}

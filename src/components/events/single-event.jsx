@@ -41,7 +41,7 @@ const SingleEvent = ({ data }) => {
       <h1> {data.title} </h1>
       {/* <Image src={data.image} width={1000} height={500} alt={data.title} /> */}
       <img src={data.image} alt={data.title} style={{width: '500px'}} />
-      <p> {data.description} </p>
+      <p style={{'fontSize': '20px'}}> {data.description} </p>
       <form onSubmit={onSubmit} className="email_registration">
         <label> Get Registered for this event!</label>
         <input
@@ -49,8 +49,9 @@ const SingleEvent = ({ data }) => {
           type="email"
           id="email"
           placeholder="Please insert your email here"
+          style={{'padding': '10px'}}
         />
-        <button type="submit"> Submit</button>
+        <button type="submit" style={{'marginTop': '30px'}}> Submit</button>
       </form>
       <p>{message}</p>
     </div>

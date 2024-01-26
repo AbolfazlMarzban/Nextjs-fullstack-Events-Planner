@@ -29,5 +29,5 @@ export const Header = () => {
         <p className="title"> Sed ut perspiciatis unde omnis</p>
       </div>
     </header>
-  );
+  );   
 };
